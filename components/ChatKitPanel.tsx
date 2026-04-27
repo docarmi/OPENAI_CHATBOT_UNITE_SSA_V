@@ -109,12 +109,12 @@ export function ChatKitPanel({
     } else if (scriptStatus === "pending") {
       timeoutId = window.setTimeout(() => {
         if (!window.customElements?.get("openai-chatkit")) {
-          handleError(
-            new CustomEvent("chatkit-script-error", {
-              detail:
-                "ChatKit web component is unavailable. Verify that the script URL is reachable.",const chatkit = useChatKit
-            })
-          );
+         handleError(
+  new CustomEvent("chatkit-script-error", {
+    detail:
+      "ChatKit web component is unavailable. Verify that the script URL is reachable.",
+  })
+);
         }
       }, 5000);
     }
