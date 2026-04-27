@@ -112,7 +112,7 @@ export function ChatKitPanel({
           handleError(
             new CustomEvent("chatkit-script-error", {
               detail:
-                "ChatKit web component is unavailable. Verify that the script URL is reachable.",
+                "ChatKit web component is unavailable. Verify that the script URL is reachable.",const chatkit = useChatKit
             })
           );
         }
@@ -263,9 +263,6 @@ export function ChatKitPanel({
 
   const chatkit = useChatKit({
     api: { getClientSecret },
-     ui: {
-    show_reasoning: false,
-  },
     theme: {
       colorScheme: theme,
       ...getThemeConfig(theme),
