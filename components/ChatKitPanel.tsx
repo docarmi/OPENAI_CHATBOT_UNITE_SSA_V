@@ -263,6 +263,9 @@ export function ChatKitPanel({
 
   const chatkit = useChatKit({
     api: { getClientSecret },
+     ui: {
+    show_reasoning: false,
+  },
     theme: {
       colorScheme: theme,
       ...getThemeConfig(theme),
